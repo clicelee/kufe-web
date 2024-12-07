@@ -11,8 +11,7 @@ const ArticlePage = async () => {
   return (
     <div className={cn('min-h-screen bg-[#036b3f] font-sans text-white')}>
       <main className={cn('container mx-auto px-4')}>
-        <h1 className={cn('mb-8 text-4xl font-bold')}>개발 아티클</h1>
-
+        <h1 className={cn('mb-8 text-4xl font-bold')}>아티클</h1>
         <div className={cn('mb-8 flex space-x-4')}>
           <div className={cn('relative grow')}>
             <input
@@ -48,7 +47,7 @@ const ArticlePage = async () => {
                 </h2>
                 <p className={cn('mb-4 line-clamp-2 text-gray-600')}>{article.description}</p>
                 <div className={cn('flex items-center justify-between')}>
-                  <span className={cn('text-sm text-gray-500')}>{article.createdAt}</span>
+                  <span className={cn('text-sm text-gray-500')}>등록일: {article.createdAt}</span>
                   <Link
                     target="_blank"
                     href={article.url}
