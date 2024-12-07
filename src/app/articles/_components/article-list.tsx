@@ -1,3 +1,5 @@
+'use client';
+
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,10 +17,14 @@ const ArticleList = ({ articles }: { articles: Article[] }) => {
         >
           <div className={cn('relative aspect-video w-full')}>
             <Image
-              src={article.thumbnail ?? '/placeholder.svg'}
+              src={article.thumbnail ?? '/placeholder.png'}
               alt={article.title ?? 'Article thumbnail'}
               fill
               unoptimized={!article.thumbnail}
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/placeholder.png';
+              }}
             />
           </div>
           <div className={cn('p-4')}>
