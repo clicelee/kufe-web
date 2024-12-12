@@ -51,7 +51,7 @@ const FilterModal = ({ isOpen, onClose }: FilterModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="max-w-[320px] sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>태그 필터</DialogTitle>
         </DialogHeader>
