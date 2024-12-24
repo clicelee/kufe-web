@@ -16,7 +16,6 @@ type PageProps = {
 const JobsPage = async ({ searchParams }: PageProps) => {
   const page = Number(searchParams.page) || 1;
   const search = searchParams.search;
-  const category = searchParams.category;
 
   const { jobs, totalPages, currentPage } = await getJobs({
     page,
